@@ -1,0 +1,41 @@
+{
+  "name": "my-test-cli",
+  "version": "0.0.1-alpha.1",
+  "main": "bin/index.js",
+  "scripts": {
+    "start": "npm run build && node bin",
+    "build": "tsc --build --clean && tsc",
+    "package": "npm run build && npm pack",
+    "test": "jest",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "bin": {
+    "test": "bin/index.js",
+    "retest": "bin/retest.js"
+  },
+  "files": [
+    "bin",
+    "jest.config.js"
+  ],
+  "keywords": [],
+  "author": "lightzane",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "glob": "^11.0.3",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.0.10",
+    "@types/prompts": "^2.4.9",
+    "jest": "^30.0.4",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "vitepress": "^1.6.3"
+  }
+}
